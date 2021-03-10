@@ -61,11 +61,14 @@ if uploaded_file is not None:
     des = 229900
     st.text("Harga Sepatu: Rp."+str(rupiah_format(des)))
     col1, col2, col3 = st.beta_columns(3)
+    # n = col1.number_input('Masukan jumlah angka random')
     randomlist = []
+    # nn =  int(n)
     for i in range(1,16):
-        n = random.random()
-        col1.text("Angka acak "+str(i)+": "+str(round(n,3)))
-        randomlist.append(n)
+        # n = random.random()
+        r = col1.number_input('Masukan angka random '+str(i)+": ")
+        # col1.text("Angka acak "+str(i)+": "+str(round(n,3)))
+        randomlist.append(r)
         
     a = 1
     perlist = []
